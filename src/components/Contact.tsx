@@ -17,13 +17,13 @@ export default function Contact() {
 
                 <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-24">
                     <a
-                        href="mailto:hello@example.com"
+                        href="mailto:jai@rajagopalan.com"
                         className="px-8 py-4 bg-white text-slate-900 font-bold rounded-full hover:bg-slate-200 transition-colors shadow-lg hover:shadow-xl hover:-translate-y-1"
                     >
                         Say Hello
                     </a>
                     <a
-                        href="https://linkedin.com"
+                        href="https://www.linkedin.com/in/jai-rajagopalan/"
                         target="_blank"
                         rel="noopener noreferrer"
                         className="px-8 py-4 bg-transparent border border-white/20 text-white font-medium rounded-full hover:bg-white/10 transition-colors"
