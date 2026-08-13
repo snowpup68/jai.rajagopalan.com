@@ -1,33 +1,36 @@
 import type { Metadata } from "next";
-import { Outfit, JetBrains_Mono } from "next/font/google";
 import "./globals.css";
-
-const outfit = Outfit({
-  variable: "--font-outfit",
-  subsets: ["latin"],
-});
-
-const jetbrainsMono = JetBrains_Mono({
-  variable: "--font-jetbrains-mono",
-  subsets: ["latin"],
-});
+import { site } from "@/lib/site";
 
 export const metadata: Metadata = {
-  title: "Director of Software Development | Portfolio",
-  description: "Bridging business strategy and technical execution. Experienced Software Architect and Engineering Leader.",
+  metadataBase: new URL(site.url),
+  title: site.title,
+  description: site.description,
+  alternates: { canonical: "/" },
+  openGraph: {
+    type: "profile",
+    siteName: site.name,
+    title: site.title,
+    description: site.description,
+    url: site.url,
+    locale: "en_US",
+  },
+  twitter: { card: "summary_large_image", title: site.title, description: site.description },
+  robots: { index: true, follow: true },
 };
 
-export default function RootLayout({
-  children,
-}: Readonly<{
-  children: React.ReactNode;
-}>) {
+// Runs before first paint so the chosen theme never flashes.
+// Not React state, so there is no hydration mismatch.
+const themeScript = `(function(){try{var t=localStorage.getItem('theme');if(t==='dark'||t==='light'){document.documentElement.setAttribute('data-theme',t);}}catch(e){}})();`;
+
+export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
   return (
     <html lang="en">
-      <body
-        className={`${outfit.variable} ${jetbrainsMono.variable} antialiased aurora-bg text-foreground overflow-x-hidden`}
-        suppressHydrationWarning
-      >
+      <head>
+        <script dangerouslySetInnerHTML={{ __html: themeScript }} />
+      </head>
+      <body>
+        <a className="skip" href="#main">Skip to content</a>
         {children}
       </body>
     </html>

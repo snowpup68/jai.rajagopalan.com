@@ -1,36 +1,72 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# rajagopalan.com
 
-## Getting Started
+Personal site for Jai Rajagopalan. Next.js **static export**, no server, deployed to
+**Firebase Hosting** on the apex domain.
 
-First, run the development server:
+## Run locally
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+npm install
+npm run dev          # http://localhost:3000
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Build
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+```bash
+npm run build        # emits ./out — plain static files
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## Deploy
 
-## Learn More
+One-time setup:
 
-To learn more about Next.js, take a look at the following resources:
+```bash
+npm install -g firebase-tools
+firebase login
+firebase use jai-rajagopalan-website
+```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+Preview on a temporary URL before touching production:
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+```bash
+npm run preview      # build + deploy to a 7-day preview channel
+```
 
-## Deploy on Vercel
+Ship it:
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+```bash
+npm run deploy       # build + deploy to production hosting
+```
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## Custom domain
+
+Connect `rajagopalan.com` (and `www`) in the Firebase console under Hosting. Firebase
+issues and renews the TLS certificate automatically, at no cost.
+
+**When updating DNS at Network Solutions, change only the A/AAAA records.** Leave `MX`,
+the SPF `TXT`, and the `google-site-verification` `TXT` exactly as they are — mail for
+`jai@rajagopalan.com` is delivered to Network Solutions and will break otherwise.
+
+## Conventions worth keeping
+
+- **The copyright year is hardcoded** in `src/lib/site.ts`. It is not computed. A
+  build-time `new Date().getFullYear()` on a statically rendered page freezes at build
+  time — that is why the previous site displayed "© 2025" indefinitely.
+- **No dead links.** Every `href` goes somewhere real; every nav anchor resolves to a
+  section id that exists on the page.
+- **No placeholder copy.** If content is not ready, the section does not ship.
+- Site-wide facts (name, email, URLs, year) live in `src/lib/site.ts`. Change them once.
+
+## Structure
+
+```
+src/app/layout.tsx      metadata, Open Graph, pre-paint theme script
+src/app/page.tsx        section composition
+src/app/globals.css     design tokens + all styling (no CSS framework)
+src/app/sitemap.ts      generated sitemap.xml
+src/app/robots.ts       generated robots.txt
+src/lib/site.ts         shared site constants
+src/components/         Header, Hero, Work, Interests, Education, Contact, Footer
+```
+
+Work history lives as a typed array at the top of `src/components/Work.tsx`.
