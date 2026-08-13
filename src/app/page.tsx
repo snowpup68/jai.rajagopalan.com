@@ -1,17 +1,25 @@
 import Header from "@/components/Header";
 import Hero from "@/components/Hero";
-import BentoGrid from "@/components/BentoGrid";
-import ExperienceTimeline from "@/components/ExperienceTimeline";
+import Work from "@/components/Work";
+import Interests from "@/components/Interests";
+import Education from "@/components/Education";
 import Contact from "@/components/Contact";
+import Footer from "@/components/Footer";
 
 export default function Home() {
   return (
-    <main className="min-h-screen selection:bg-primary/30">
+    <>
       <Header />
-      <Hero />
-      <BentoGrid />
-      <ExperienceTimeline />
-      <Contact />
-    </main>
+      <main id="main">
+        <Hero />
+        <div className="wrap">
+          <Work />
+          <Interests />
+          <Education />
+          <Contact />
+        </div>
+      </main>
+      <Footer />
+    </>
   );
 }
