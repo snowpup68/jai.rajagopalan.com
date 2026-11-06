@@ -49,13 +49,15 @@ the SPF `TXT`, and the `google-site-verification` `TXT` exactly as they are — 
 
 ## Conventions worth keeping
 
-- **The copyright year is hardcoded** in `src/lib/site.ts`. It is not computed. A
-  build-time `new Date().getFullYear()` on a statically rendered page freezes at build
-  time — that is why the previous site displayed "© 2025" indefinitely.
+- **The copyright notice carries no year** — so there is nothing to go stale. Never compute
+  one either: a build-time `new Date().getFullYear()` on a statically rendered page freezes
+  at build time, which is why the previous site displayed "© 2025" indefinitely.
 - **No dead links.** Every `href` goes somewhere real; every nav anchor resolves to a
   section id that exists on the page.
 - **No placeholder copy.** If content is not ready, the section does not ship.
-- Site-wide facts (name, email, URLs, year) live in `src/lib/site.ts`. Change them once.
+- **Watch for copy that dates itself.** "This autumn", "currently", "most recently" all rot
+  quietly. Prefer a stated year: "reached C1 in 2026" stays true forever.
+- Site-wide facts (name, email, URLs) live in `src/lib/site.ts`. Change them once.
 
 ## Structure
 

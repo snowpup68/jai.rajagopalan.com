@@ -8,6 +8,4 @@ export const site = {
   email: "jai@rajagopalan.com",
   linkedin: "https://www.linkedin.com/in/jai-rajagopalan/",
   github: "https://github.com/snowpup68",
-  // Hardcoded on purpose. A build-time new Date() froze the old site at 2025.
-  year: 2026,
 };

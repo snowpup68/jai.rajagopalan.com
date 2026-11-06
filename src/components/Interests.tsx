@@ -41,7 +41,7 @@ export default function Interests() {
             English natively. French from a Diplôme Supérieur in literature at the Alliance Française,
             Bangalore, 1988.
           </p>
-          <p>German since Munich in 1992, with a Goethe-Institut C1 course this autumn to finish the job.</p>
+          <p>German since Munich in 1992. I reached C1 with the Goethe-Institut in 2026.</p>
         </article>
       </div>
     </section>
