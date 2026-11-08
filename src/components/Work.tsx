@@ -17,16 +17,10 @@ const eras: Era[] = [
     name: "Consulting",
     roles: [
       {
-        when: "Mar 2026 —",
+        when: "Mar 2024 —",
         title: "Product Management Consultant",
         org: "Ripple Group, Inc. · Remote",
-        what: "Client delivery for agentic AI projects in service businesses — requirements and specifications through to rollout, with agents running real operational workflows.",
-      },
-      {
-        when: "2024 — 2025",
-        title: "Software Architect",
-        org: "Ripple Group, Inc. · Remote",
-        what: "Architectural design and system mapping for porting a core rent-to-own application to AWS. Authored the cloud infrastructure and application architecture documentation guiding deployment, steered an offshore development team day to day, and held the onshore client relationships.",
+        what: "Client delivery for agentic AI projects in service businesses — requirements and specifications through to rollout, with agents running real operational workflows. Earlier in the engagement, the architectural design and system mapping for porting a core rent-to-own application to AWS: the cloud infrastructure and application architecture documentation guiding deployment, technical steering of an offshore development team, and the onshore client relationships.",
       },
     ],
   },
