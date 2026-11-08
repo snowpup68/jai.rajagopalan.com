@@ -1,7 +1,7 @@
 export default function Interests() {
   return (
     <section id="interests">
-      <p className="eyebrow">02 — Away from the desk</p>
+      <p className="eyebrow">03 — Away from the desk</p>
       <h2 className="section-title">Snow, departure boards, grammar</h2>
       <p className="section-intro">
         Each of these started with a posting. The work put me somewhere new, and I made the most of

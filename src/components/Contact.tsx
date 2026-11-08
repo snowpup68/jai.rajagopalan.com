@@ -3,7 +3,7 @@ import { site } from "@/lib/site";
 export default function Contact() {
   return (
     <section id="contact">
-      <p className="eyebrow">04 — Contact</p>
+      <p className="eyebrow">05 — Contact</p>
       <h2 className="section-title">Say hello</h2>
       <p className="section-intro">Best by email.</p>
 

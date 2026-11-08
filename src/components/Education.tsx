@@ -7,7 +7,7 @@ const education = [
 export default function Education() {
   return (
     <section id="education">
-      <p className="eyebrow">03 — Education</p>
+      <p className="eyebrow">04 — Education</p>
       <h2 className="section-title">Education</h2>
       <ul className="edu">
         {education.map((e) => (

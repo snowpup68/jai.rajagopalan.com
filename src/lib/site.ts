@@ -1,7 +1,6 @@
 export const site = {
   name: "Jai Rajagopalan",
-  title: "Jai Rajagopalan — Software Consultant",
-  role: "Software Consultant",
+  title: "Jai Rajagopalan",
   description:
     "Software developer, director, linguist. Thirty-five years of building software — from an internship in Finland in 1991 to agentic AI now.",
   url: "https://rajagopalan.com",

@@ -166,7 +166,7 @@ const eras: Era[] = [
 export default function Work() {
   return (
     <section id="work">
-      <p className="eyebrow">01 — Work</p>
+      <p className="eyebrow">02 — Work</p>
       <h2 className="section-title">The whole record</h2>
       <p className="section-intro">
         Everything, in order, since 1 August 1991. Hands-on and running teams, alternately,

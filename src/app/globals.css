@@ -99,6 +99,10 @@ section { padding: 4.5rem 0; border-top: 1px solid var(--rule); }
 }
 .section-intro { color: var(--ink-soft); margin: 0 0 3rem; max-width: 48ch; }
 
+.prose { max-width: 48ch; }
+.prose p { color: var(--ink-soft); margin: 0 0 1.1rem; }
+.prose p:last-child { margin-bottom: 0; }
+
 /* work */
 .era { margin-bottom: 3.25rem; }
 .era:last-of-type { margin-bottom: 0; }

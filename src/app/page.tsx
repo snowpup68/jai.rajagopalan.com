@@ -1,5 +1,6 @@
 import Header from "@/components/Header";
 import Hero from "@/components/Hero";
+import About from "@/components/About";
 import Work from "@/components/Work";
 import Interests from "@/components/Interests";
 import Education from "@/components/Education";
@@ -13,6 +14,7 @@ export default function Home() {
       <main id="main">
         <Hero />
         <div className="wrap">
+          <About />
           <Work />
           <Interests />
           <Education />
