@@ -17,7 +17,13 @@ const eras: Era[] = [
     name: "Consulting",
     roles: [
       {
-        when: "Mar 2024 —",
+        when: "Mar 2026 —",
+        title: "Product Management Consultant",
+        org: "Ripple Group, Inc. · Remote",
+        what: "Client delivery for agentic AI projects in service businesses — requirements and specifications through to rollout, with agents running real operational workflows.",
+      },
+      {
+        when: "2024 — 2025",
         title: "Software Architect",
         org: "Ripple Group, Inc. · Remote",
         what: "Architectural design and system mapping for porting a core rent-to-own application to AWS. Authored the cloud infrastructure and application architecture documentation guiding deployment, steered an offshore development team day to day, and held the onshore client relationships.",
@@ -32,7 +38,7 @@ const eras: Era[] = [
         when: "2023 — 2024",
         title: "Director, IT Services",
         org: "Orbit Future Academy · Jakarta — remote from Bengaluru",
-        what: "Education technology applications.",
+        what: "An educational up-skilling portal, from requirements through launch.",
       },
       {
         when: "2019 — 2023",
@@ -44,6 +50,7 @@ const eras: Era[] = [
         when: "2019",
         title: "Senior Software Developer",
         org: "ServerCentral Turing Group · Chicago",
+        what: "Backend development in PHP.",
       },
       {
         when: "2016 — 2019",

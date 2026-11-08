@@ -8,8 +8,8 @@ export default function Hero() {
           director, linguist.
         </h1>
         <p className="standfirst">
-          Thirty-five years of building software — from an internship in Finland in 1991 to AWS
-          architecture now, by way of Munich telecom, city procurement and ten magazine websites.
+          Thirty-five years of building software — from an internship in Finland in 1991 to agentic
+          AI now, by way of Munich telecom, city procurement and ten magazine websites.
         </p>
         <p className="standfirst-sub">
           I split the year between Chicago and Bengaluru, where my family is.
